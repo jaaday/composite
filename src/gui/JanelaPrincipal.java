@@ -7,6 +7,7 @@
 package gui;
 
 import java.util.*;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import modelo.*;
 
@@ -39,8 +40,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         panelPrincipal = new javax.swing.JPanel();
         panelDepartamentos = new javax.swing.JPanel();
-        labelNomeDepartamento = new javax.swing.JLabel();
-        comboBoxNomeDepartamento = new javax.swing.JComboBox();
+        labelNomeDivisao = new javax.swing.JLabel();
+        comboBoxNomeDivisao = new javax.swing.JComboBox();
         labelRecursosHumanos = new javax.swing.JLabel();
         textNomeRecursosHumanos = new javax.swing.JTextField();
         labelPrecoRH = new javax.swing.JLabel();
@@ -78,12 +79,12 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         panelDepartamentos.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        labelNomeDepartamento.setText("Nome do departamento:");
+        labelNomeDivisao.setText("Nome da divisão:");
 
-        comboBoxNomeDepartamento.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        comboBoxNomeDepartamento.addActionListener(new java.awt.event.ActionListener() {
+        comboBoxNomeDivisao.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxNomeDivisao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboBoxNomeDepartamentoActionPerformed(evt);
+                comboBoxNomeDivisaoActionPerformed(evt);
             }
         });
 
@@ -119,9 +120,9 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         panelDepartamentosLayout.setHorizontalGroup(
             panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDepartamentosLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textNomeMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(labelNomeMaquina))
@@ -130,7 +131,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                             .addComponent(labelPrecoMaquina)
                             .addComponent(textPrecoMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textNomeRecursosHumanos, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(labelRecursosHumanos))
@@ -138,36 +138,34 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                         .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelPrecoRH)
                             .addComponent(textPrecoRH, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDepartamentosLayout.createSequentialGroup()
-                                .addComponent(textNomeChefe, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textCustoChefe, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textBonificacaoChefe))
-                            .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                                .addComponent(comboBoxNomeDepartamento, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(botaAddDivisao))
-                            .addComponent(labelNomeDepartamento, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDepartamentosLayout.createSequentialGroup()
-                                .addComponent(labelNomeDoChefe)
-                                .addGap(145, 145, 145)
-                                .addComponent(labelCustoChefe)
-                                .addGap(35, 35, 35)
-                                .addComponent(labelBonificacao)))))
+                    .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDepartamentosLayout.createSequentialGroup()
+                            .addComponent(textNomeChefe, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(textCustoChefe, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(textBonificacaoChefe))
+                        .addGroup(panelDepartamentosLayout.createSequentialGroup()
+                            .addComponent(comboBoxNomeDivisao, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(botaAddDivisao))
+                        .addComponent(labelNomeDivisao, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDepartamentosLayout.createSequentialGroup()
+                            .addComponent(labelNomeDoChefe)
+                            .addGap(145, 145, 145)
+                            .addComponent(labelCustoChefe)
+                            .addGap(35, 35, 35)
+                            .addComponent(labelBonificacao))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelDepartamentosLayout.setVerticalGroup(
             panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDepartamentosLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(labelNomeDepartamento)
+                .addComponent(labelNomeDivisao)
                 .addGap(8, 8, 8)
                 .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboBoxNomeDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBoxNomeDivisao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaAddDivisao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -289,11 +287,17 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void comboBoxNomeDepartamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxNomeDepartamentoActionPerformed
-        
-    }//GEN-LAST:event_comboBoxNomeDepartamentoActionPerformed
+    private void comboBoxNomeDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxNomeDivisaoActionPerformed
+        comboBoxNomeDivisao.setModel(new DefaultComboBoxModel(divisoes.toArray()));
+        //comboBox de String com o nome do livro:
+
+        for (Divisao d : divisoes){
+            comboBoxNomeDivisao.addItem(d.getNome());
+        }
+    }//GEN-LAST:event_comboBoxNomeDivisaoActionPerformed
 
     private void botaAddDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaAddDivisaoActionPerformed
        new gui.JanelaAdicionarDivisao().setVisible(true);
@@ -303,6 +307,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textCustoChefeActionPerformed
 
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -347,7 +355,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton buttonExportarXml;
     private javax.swing.JButton buttonImportarXml;
     private javax.swing.JComboBox comboBoxExibirRelatorio;
-    private javax.swing.JComboBox comboBoxNomeDepartamento;
+    private javax.swing.JComboBox comboBoxNomeDivisao;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -356,7 +364,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel labelBonusChefe;
     private javax.swing.JLabel labelCustoChefe;
     private javax.swing.JLabel labelExibirRelatorio;
-    private javax.swing.JLabel labelNomeDepartamento;
+    private javax.swing.JLabel labelNomeDivisao;
     private javax.swing.JLabel labelNomeDoChefe;
     private javax.swing.JLabel labelNomeMaquina;
     private javax.swing.JLabel labelPrecoMaquina;

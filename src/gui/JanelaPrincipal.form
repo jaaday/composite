@@ -6,7 +6,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -87,9 +87,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="textNomeMaquina" alignment="0" min="-2" pref="212" max="-2" attributes="0"/>
                                   <Component id="labelNomeMaquina" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -101,7 +101,6 @@
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="textNomeRecursosHumanos" min="-2" pref="212" max="-2" attributes="0"/>
                                   <Component id="labelRecursosHumanos" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -112,29 +111,26 @@
                                   <Component id="textPrecoRH" min="-2" pref="60" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="textNomeChefe" min="-2" pref="213" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="textCustoChefe" min="-2" pref="60" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="textBonificacaoChefe" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="comboBoxNomeDepartamento" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="botaAddDivisao" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="labelNomeDepartamento" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelNomeDoChefe" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
-                                      <Component id="labelCustoChefe" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="labelBonificacao" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="textNomeChefe" min="-2" pref="213" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="textCustoChefe" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="textBonificacaoChefe" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="comboBoxNomeDivisao" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="botaAddDivisao" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="labelNomeDivisao" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="labelNomeDoChefe" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+                                  <Component id="labelCustoChefe" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="labelBonificacao" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -146,10 +142,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="labelNomeDepartamento" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelNomeDivisao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="comboBoxNomeDepartamento" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboBoxNomeDivisao" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="botaAddDivisao" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -190,12 +186,12 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="labelNomeDepartamento">
+            <Component class="javax.swing.JLabel" name="labelNomeDivisao">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Nome do departamento:"/>
+                <Property name="text" type="java.lang.String" value="Nome da divis&#xe3;o:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="comboBoxNomeDepartamento">
+            <Component class="javax.swing.JComboBox" name="comboBoxNomeDivisao">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -207,7 +203,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxNomeDepartamentoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxNomeDivisaoActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="labelRecursosHumanos">

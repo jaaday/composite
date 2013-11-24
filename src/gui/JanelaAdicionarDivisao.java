@@ -8,6 +8,7 @@ package gui;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import modelo.Divisao;
 
 /**
@@ -41,9 +42,9 @@ public class JanelaAdicionarDivisao extends javax.swing.JFrame {
         labelNomeDivisao = new javax.swing.JLabel();
         textNomeDivisao = new javax.swing.JTextField();
         botaoAddDivisao = new javax.swing.JButton();
-        BotaoCancelarDivisao = new javax.swing.JButton();
+        BotaoSairDivisao = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         labelNomeDivisao.setText("Nome:");
 
@@ -54,10 +55,10 @@ public class JanelaAdicionarDivisao extends javax.swing.JFrame {
             }
         });
 
-        BotaoCancelarDivisao.setText("Cancelar");
-        BotaoCancelarDivisao.addActionListener(new java.awt.event.ActionListener() {
+        BotaoSairDivisao.setText("Sair");
+        BotaoSairDivisao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoCancelarDivisaoActionPerformed(evt);
+                BotaoSairDivisaoActionPerformed(evt);
             }
         });
 
@@ -71,7 +72,7 @@ public class JanelaAdicionarDivisao extends javax.swing.JFrame {
                         .addGap(45, 45, 45)
                         .addComponent(botaoAddDivisao)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BotaoCancelarDivisao))
+                        .addComponent(BotaoSairDivisao))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(labelNomeDivisao)
@@ -89,22 +90,32 @@ public class JanelaAdicionarDivisao extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoAddDivisao)
-                    .addComponent(BotaoCancelarDivisao))
+                    .addComponent(BotaoSairDivisao))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoAddDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAddDivisaoActionPerformed
        divisao.setNome(textNomeDivisao.getText());
        divisoes.add(divisao);
+       JOptionPane.showMessageDialog(null, "Divisão Cadastrada com sucesso!!");
+       textNomeDivisao.setText("");
+       textNomeDivisao.requestFocus();
     }//GEN-LAST:event_botaoAddDivisaoActionPerformed
 
-    private void BotaoCancelarDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCancelarDivisaoActionPerformed
-      
-    }//GEN-LAST:event_BotaoCancelarDivisaoActionPerformed
+    private void BotaoSairDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSairDivisaoActionPerformed
+      this.fechar(); 
+    }//GEN-LAST:event_BotaoSairDivisaoActionPerformed
 
+                                             
+    private void fechar(){  
+        if(javax.swing.JOptionPane.showConfirmDialog(null,"Deseja Fechar?","ATENÇÂO ",javax.swing.JOptionPane.YES_NO_OPTION )==0){  
+            this.dispose();  
+        }  
+    }     
     /**
      * @param args the command line arguments
      */
@@ -141,7 +152,7 @@ public class JanelaAdicionarDivisao extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotaoCancelarDivisao;
+    private javax.swing.JButton BotaoSairDivisao;
     private javax.swing.JButton botaoAddDivisao;
     private javax.swing.JLabel labelNomeDivisao;
     private javax.swing.JTextField textNomeDivisao;
