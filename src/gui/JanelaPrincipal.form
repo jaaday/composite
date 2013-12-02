@@ -23,12 +23,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelPrincipal" alignment="0" max="32767" attributes="0"/>
+          <Component id="panelPrincipal" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelPrincipal" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Component id="panelPrincipal" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -38,22 +41,47 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="panelDepartamentos" max="32767" attributes="0"/>
-              <Component id="panelRelatorioEEventos" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="panelDepartamentos" max="32767" attributes="0"/>
+                      <Component id="panelRelatorioEEventos" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="14" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="panelDepartamentos" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="panelRelatorioEEventos" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jPanel1" min="-2" pref="323" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="panelDepartamentos" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="panelRelatorioEEventos" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
         <Container class="javax.swing.JPanel" name="panelDepartamentos">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder/>
+              </Border>
+            </Property>
+          </Properties>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -61,75 +89,51 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="311" max="-2" attributes="0"/>
-                              <Component id="labelDepartamentos" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="textNomeMaquina" alignment="0" min="-2" pref="212" max="-2" attributes="0"/>
+                                  <Component id="labelNomeMaquina" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelPrecoMaquina" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textPrecoMaquina" min="-2" pref="60" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="textNomeRecursosHumanos" min="-2" pref="212" max="-2" attributes="0"/>
+                                  <Component id="labelRecursosHumanos" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelPrecoRH" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textPrecoRH" min="-2" pref="60" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="labelNomeMaquina" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="textNomeMaquina" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="labelRecursosHumanos" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="textNomeRecursosHumanos" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="labelNomeDoChefe" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="textNomeChefe" max="32767" attributes="0"/>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="buttonCadastrar" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="buttonAlterar" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="buttonPesquisar" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="labelPrecoRH" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="textPrecoRH" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="labelPrecoMaquina" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="textPrecoMaquina" min="-2" pref="60" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="labelCustoChefe" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="textCustoChefe" max="32767" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="labelBonificacao" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="textBonificacaoChefe" min="-2" pref="60" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="buttonExcluir" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelNomeDepartamento" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textNomeChefe" min="-2" pref="213" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="comboBoxNomeDepartamento" min="-2" pref="193" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                      <Component id="textCustoChefe" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="textBonificacaoChefe" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="comboBoxNomeDepartamento" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Component id="botaAddDivisao" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="labelNomeDepartamento" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelNomeDoChefe" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+                                      <Component id="labelCustoChefe" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="labelBonificacao" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -141,57 +145,51 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelDepartamentos" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelNomeDepartamento" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="comboBoxNomeDepartamento" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="botaAddDivisao" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="labelNomeDepartamento" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelRecursosHumanos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textNomeRecursosHumanos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboBoxNomeDepartamento" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botaAddDivisao" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labelPrecoRH" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelRecursosHumanos" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="textNomeRecursosHumanos" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="textPrecoRH" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labelNomeMaquina" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textNomeMaquina" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="labelPrecoMaquina" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="textNomeMaquina" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="textPrecoMaquina" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labelNomeDoChefe" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textNomeChefe" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="labelCustoChefe" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textCustoChefe" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="labelBonificacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="textNomeChefe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textCustoChefe" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="textBonificacaoChefe" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="28" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="buttonCadastrar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="buttonAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="buttonPesquisar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="buttonExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="labelDepartamentos">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Departamentos"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="labelNomeDepartamento">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nome do departamento:"/>
@@ -253,6 +251,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="textCustoChefe">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textCustoChefeActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="labelBonificacao">
               <Properties>
@@ -261,29 +262,9 @@
             </Component>
             <Component class="javax.swing.JTextField" name="textBonificacaoChefe">
             </Component>
-            <Component class="javax.swing.JButton" name="buttonCadastrar">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cadastrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="buttonAlterar">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Alterar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="buttonPesquisar">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Pesquisar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="buttonExcluir">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Excluir"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="botaAddDivisao">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Adicionar Divisao"/>
+                <Property name="text" type="java.lang.String" value="+ Divisao"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaAddDivisaoActionPerformed"/>
@@ -292,135 +273,131 @@
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="panelRelatorioEEventos">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder/>
+              </Border>
+            </Property>
+          </Properties>
 
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelSalarioRH" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="textSalarioRH" min="-2" pref="94" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelBonusChefe" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="textBonusChefe" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="buttonAjustarSalarioRH" min="-2" max="-2" attributes="0"/>
-                                  <Component id="buttonAjustarBonusChefe" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="labelExibirRelatorio" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="comboBoxExibirRelatorio" min="-2" pref="114" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="buttonExibirRelatorio" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="buttonExportarXml" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                              <Component id="buttonImportarXml" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelSalarioRH" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textSalarioRH" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="buttonAjustarSalarioRH" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelBonusChefe" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textBonusChefe" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="buttonAjustarBonusChefe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelExibirRelatorio" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="comboBoxExibirRelatorio" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="buttonExibirRelatorio" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="buttonExportarXml" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="buttonImportarXml" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="78" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+            <Property name="useNullLayout" type="boolean" value="false"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="labelSalarioRH">
+            <Container class="javax.swing.JPanel" name="jPanel2">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="10" y="10" width="110" height="70"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="1"/>
+                <Property name="rows" type="int" value="3"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="labelSalarioRH">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Sal&#xe1;rio(RH)        (%):"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelBonusChefe">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Bonus(Chefe)    (%):"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelExibirRelatorio">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Exibir Relat&#xf3;rio: "/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel3">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="120" y="10" width="120" height="-1"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="1"/>
+                <Property name="verticalGap" type="int" value="5"/>
+                <Property name="rows" type="int" value="3"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JTextField" name="textSalarioRH">
+                </Component>
+                <Component class="javax.swing.JTextField" name="textBonusChefe">
+                </Component>
+                <Component class="javax.swing.JComboBox" name="comboBoxExibirRelatorio">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel4">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="250" y="10" width="110" height="70"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="1"/>
+                <Property name="verticalGap" type="int" value="2"/>
+                <Property name="rows" type="int" value="3"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="buttonAjustarSalarioRH">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ajustar Sal&#xe1;rio"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="buttonAjustarBonusChefe">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ajustar B&#xf4;nus"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="buttonExibirRelatorio">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Exibir"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+            <Property name="columns" type="int" value="1"/>
+            <Property name="verticalGap" type="int" value="2"/>
+            <Property name="rows" type="int" value="12"/>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="buttonCadastrar">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Sal&#xe1;rio(RH)           (%):"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelBonusChefe">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Bonus(Chefe)       (%):"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="textSalarioRH">
-            </Component>
-            <Component class="javax.swing.JTextField" name="textBonusChefe">
-            </Component>
-            <Component class="javax.swing.JButton" name="buttonAjustarSalarioRH">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ajustar Sal&#xe1;rio"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="buttonAjustarBonusChefe">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ajustar B&#xf4;nus"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelExibirRelatorio">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Exibir Relat&#xf3;rio: "/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="comboBoxExibirRelatorio">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="buttonExibirRelatorio">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Exibir"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="buttonExportarXml">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Exportar XML"/>
+                <Property name="text" type="java.lang.String" value="Cadastrar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="buttonImportarXml">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Importar XML"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="buttonExportarXml">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Exportar XML"/>
               </Properties>
             </Component>
           </SubComponents>

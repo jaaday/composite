@@ -39,7 +39,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         panelPrincipal = new javax.swing.JPanel();
         panelDepartamentos = new javax.swing.JPanel();
-        labelDepartamentos = new javax.swing.JLabel();
         labelNomeDepartamento = new javax.swing.JLabel();
         comboBoxNomeDepartamento = new javax.swing.JComboBox();
         labelRecursosHumanos = new javax.swing.JLabel();
@@ -56,27 +55,28 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         textCustoChefe = new javax.swing.JTextField();
         labelBonificacao = new javax.swing.JLabel();
         textBonificacaoChefe = new javax.swing.JTextField();
-        buttonCadastrar = new javax.swing.JButton();
-        buttonAlterar = new javax.swing.JButton();
-        buttonPesquisar = new javax.swing.JButton();
-        buttonExcluir = new javax.swing.JButton();
         botaAddDivisao = new javax.swing.JButton();
         panelRelatorioEEventos = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         labelSalarioRH = new javax.swing.JLabel();
         labelBonusChefe = new javax.swing.JLabel();
+        labelExibirRelatorio = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
         textSalarioRH = new javax.swing.JTextField();
         textBonusChefe = new javax.swing.JTextField();
+        comboBoxExibirRelatorio = new javax.swing.JComboBox();
+        jPanel4 = new javax.swing.JPanel();
         buttonAjustarSalarioRH = new javax.swing.JButton();
         buttonAjustarBonusChefe = new javax.swing.JButton();
-        labelExibirRelatorio = new javax.swing.JLabel();
-        comboBoxExibirRelatorio = new javax.swing.JComboBox();
         buttonExibirRelatorio = new javax.swing.JButton();
-        buttonExportarXml = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        buttonCadastrar = new javax.swing.JButton();
         buttonImportarXml = new javax.swing.JButton();
+        buttonExportarXml = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        labelDepartamentos.setText("Departamentos");
+        panelDepartamentos.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         labelNomeDepartamento.setText("Nome do departamento:");
 
@@ -99,17 +99,15 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         labelCustoChefe.setText("Custo:");
 
+        textCustoChefe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textCustoChefeActionPerformed(evt);
+            }
+        });
+
         labelBonificacao.setText("Bonificação:");
 
-        buttonCadastrar.setText("Cadastrar");
-
-        buttonAlterar.setText("Alterar");
-
-        buttonPesquisar.setText("Pesquisar");
-
-        buttonExcluir.setText("Excluir");
-
-        botaAddDivisao.setText("Adicionar Divisao");
+        botaAddDivisao.setText("+ Divisao");
         botaAddDivisao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaAddDivisaoActionPerformed(evt);
@@ -123,203 +121,171 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addGroup(panelDepartamentosLayout.createSequentialGroup()
                 .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                        .addGap(311, 311, 311)
-                        .addComponent(labelDepartamentos))
+                        .addContainerGap()
+                        .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textNomeMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelNomeMaquina))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelPrecoMaquina)
+                            .addComponent(textPrecoMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(panelDepartamentosLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                                .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDepartamentosLayout.createSequentialGroup()
-                                        .addComponent(labelNomeMaquina)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textNomeMaquina))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDepartamentosLayout.createSequentialGroup()
-                                        .addComponent(labelRecursosHumanos)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textNomeRecursosHumanos))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDepartamentosLayout.createSequentialGroup()
-                                        .addComponent(labelNomeDoChefe)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(textNomeChefe)
-                                            .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                                                .addComponent(buttonCadastrar)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(buttonAlterar)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(buttonPesquisar)
-                                                .addGap(0, 0, Short.MAX_VALUE)))))
-                                .addGap(18, 18, 18)
-                                .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                                        .addGap(44, 44, 44)
-                                        .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                                                .addComponent(labelPrecoRH)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(textPrecoRH))
-                                            .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                                                .addComponent(labelPrecoMaquina)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(textPrecoMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                                                .addComponent(labelCustoChefe)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(textCustoChefe)))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(labelBonificacao)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textBonificacaoChefe, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(buttonExcluir)))
-                            .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                                .addComponent(labelNomeDepartamento)
+                            .addComponent(textNomeRecursosHumanos, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelRecursosHumanos))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelPrecoRH)
+                            .addComponent(textPrecoRH, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelDepartamentosLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDepartamentosLayout.createSequentialGroup()
+                                .addComponent(textNomeChefe, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(comboBoxNomeDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8)
-                                .addComponent(botaAddDivisao)))))
+                                .addComponent(textCustoChefe, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textBonificacaoChefe))
+                            .addGroup(panelDepartamentosLayout.createSequentialGroup()
+                                .addComponent(comboBoxNomeDepartamento, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(botaAddDivisao))
+                            .addComponent(labelNomeDepartamento, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelDepartamentosLayout.createSequentialGroup()
+                                .addComponent(labelNomeDoChefe)
+                                .addGap(145, 145, 145)
+                                .addComponent(labelCustoChefe)
+                                .addGap(35, 35, 35)
+                                .addComponent(labelBonificacao)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelDepartamentosLayout.setVerticalGroup(
             panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDepartamentosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelDepartamentos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelNomeDepartamento)
-                    .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(comboBoxNomeDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(botaAddDivisao)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelNomeDepartamento)
+                .addGap(8, 8, 8)
                 .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelRecursosHumanos)
-                    .addComponent(textNomeRecursosHumanos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBoxNomeDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaAddDivisao))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelPrecoRH)
+                    .addComponent(labelRecursosHumanos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textNomeRecursosHumanos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textPrecoRH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeMaquina)
+                    .addComponent(labelPrecoMaquina))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textNomeMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelPrecoMaquina)
                     .addComponent(textPrecoMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNomeDoChefe)
-                    .addComponent(textNomeChefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelCustoChefe)
-                    .addComponent(textCustoChefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelBonificacao)
-                    .addComponent(textBonificacaoChefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                    .addComponent(labelBonificacao))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelDepartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonCadastrar)
-                    .addComponent(buttonAlterar)
-                    .addComponent(buttonPesquisar)
-                    .addComponent(buttonExcluir))
-                .addGap(25, 25, 25))
+                    .addComponent(textNomeChefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textCustoChefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textBonificacaoChefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29))
         );
 
-        labelSalarioRH.setText("Salário(RH)           (%):");
+        panelRelatorioEEventos.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        panelRelatorioEEventos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        labelBonusChefe.setText("Bonus(Chefe)       (%):");
+        jPanel2.setLayout(new java.awt.GridLayout(3, 1));
 
-        buttonAjustarSalarioRH.setText("Ajustar Salário");
+        labelSalarioRH.setText("Salário(RH)        (%):");
+        jPanel2.add(labelSalarioRH);
 
-        buttonAjustarBonusChefe.setText("Ajustar Bônus");
+        labelBonusChefe.setText("Bonus(Chefe)    (%):");
+        jPanel2.add(labelBonusChefe);
 
         labelExibirRelatorio.setText("Exibir Relatório: ");
+        jPanel2.add(labelExibirRelatorio);
+
+        panelRelatorioEEventos.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 70));
+
+        jPanel3.setLayout(new java.awt.GridLayout(3, 1, 0, 5));
+        jPanel3.add(textSalarioRH);
+        jPanel3.add(textBonusChefe);
 
         comboBoxExibirRelatorio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel3.add(comboBoxExibirRelatorio);
+
+        panelRelatorioEEventos.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 120, -1));
+
+        jPanel4.setLayout(new java.awt.GridLayout(3, 1, 0, 2));
+
+        buttonAjustarSalarioRH.setText("Ajustar Salário");
+        jPanel4.add(buttonAjustarSalarioRH);
+
+        buttonAjustarBonusChefe.setText("Ajustar Bônus");
+        jPanel4.add(buttonAjustarBonusChefe);
 
         buttonExibirRelatorio.setText("Exibir");
+        jPanel4.add(buttonExibirRelatorio);
 
-        buttonExportarXml.setText("Exportar XML");
+        panelRelatorioEEventos.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 110, 70));
+
+        jPanel1.setLayout(new java.awt.GridLayout(12, 1, 0, 2));
+
+        buttonCadastrar.setText("Cadastrar");
+        jPanel1.add(buttonCadastrar);
 
         buttonImportarXml.setText("Importar XML");
+        jPanel1.add(buttonImportarXml);
 
-        javax.swing.GroupLayout panelRelatorioEEventosLayout = new javax.swing.GroupLayout(panelRelatorioEEventos);
-        panelRelatorioEEventos.setLayout(panelRelatorioEEventosLayout);
-        panelRelatorioEEventosLayout.setHorizontalGroup(
-            panelRelatorioEEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRelatorioEEventosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelRelatorioEEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRelatorioEEventosLayout.createSequentialGroup()
-                        .addGroup(panelRelatorioEEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(panelRelatorioEEventosLayout.createSequentialGroup()
-                                .addComponent(labelSalarioRH)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textSalarioRH, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelRelatorioEEventosLayout.createSequentialGroup()
-                                .addComponent(labelBonusChefe)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textBonusChefe)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelRelatorioEEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buttonAjustarSalarioRH)
-                            .addComponent(buttonAjustarBonusChefe)))
-                    .addGroup(panelRelatorioEEventosLayout.createSequentialGroup()
-                        .addComponent(labelExibirRelatorio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comboBoxExibirRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(buttonExibirRelatorio))
-                    .addGroup(panelRelatorioEEventosLayout.createSequentialGroup()
-                        .addComponent(buttonExportarXml)
-                        .addGap(41, 41, 41)
-                        .addComponent(buttonImportarXml)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panelRelatorioEEventosLayout.setVerticalGroup(
-            panelRelatorioEEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRelatorioEEventosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelRelatorioEEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelSalarioRH)
-                    .addComponent(textSalarioRH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonAjustarSalarioRH))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelRelatorioEEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelBonusChefe)
-                    .addComponent(textBonusChefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonAjustarBonusChefe))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelRelatorioEEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelExibirRelatorio)
-                    .addComponent(comboBoxExibirRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonExibirRelatorio))
-                .addGap(49, 49, 49)
-                .addGroup(panelRelatorioEEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonExportarXml)
-                    .addComponent(buttonImportarXml))
-                .addContainerGap(78, Short.MAX_VALUE))
-        );
+        buttonExportarXml.setText("Exportar XML");
+        jPanel1.add(buttonExportarXml);
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelDepartamentos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(panelRelatorioEEventos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelDepartamentos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelRelatorioEEventos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addComponent(panelDepartamentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelRelatorioEEventos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 21, Short.MAX_VALUE))
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addComponent(panelDepartamentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelRelatorioEEventos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -333,6 +299,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
        new gui.JanelaAdicionarDivisao().setVisible(true);
     }//GEN-LAST:event_botaAddDivisaoActionPerformed
 
+    private void textCustoChefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textCustoChefeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textCustoChefeActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -344,7 +314,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Metal".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -372,19 +342,19 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton botaAddDivisao;
     private javax.swing.JButton buttonAjustarBonusChefe;
     private javax.swing.JButton buttonAjustarSalarioRH;
-    private javax.swing.JButton buttonAlterar;
     private javax.swing.JButton buttonCadastrar;
-    private javax.swing.JButton buttonExcluir;
     private javax.swing.JButton buttonExibirRelatorio;
     private javax.swing.JButton buttonExportarXml;
     private javax.swing.JButton buttonImportarXml;
-    private javax.swing.JButton buttonPesquisar;
     private javax.swing.JComboBox comboBoxExibirRelatorio;
     private javax.swing.JComboBox comboBoxNomeDepartamento;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel labelBonificacao;
     private javax.swing.JLabel labelBonusChefe;
     private javax.swing.JLabel labelCustoChefe;
-    private javax.swing.JLabel labelDepartamentos;
     private javax.swing.JLabel labelExibirRelatorio;
     private javax.swing.JLabel labelNomeDepartamento;
     private javax.swing.JLabel labelNomeDoChefe;
