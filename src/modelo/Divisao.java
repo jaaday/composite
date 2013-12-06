@@ -9,18 +9,18 @@ import java.util.*;
 
 public class Divisao extends Empresa {
 
-    private String nome;
+    private String nomeDivisao;
     List<Empresa> divisoes = new ArrayList<Empresa>();
 
     public Divisao() {
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeChefe() {
+        return nomeDivisao;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeDivisao(String nomeDivisao) {
+        this.nomeDivisao = nomeDivisao;
     }
 
     public void add(Empresa divisao) {
@@ -35,6 +35,6 @@ public class Divisao extends Empresa {
     }
 
     public String toString() {
-        return "Divisao{" + "nome=" + nome + '}';
+        return "Divisao{" + "nomeDivisao=" + nomeDivisao + '}';
     }
 }

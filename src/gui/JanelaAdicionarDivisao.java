@@ -11,6 +11,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import modelo.Divisao;
 
+
 /**
  *
  * @author Douglas
@@ -23,10 +24,12 @@ public class JanelaAdicionarDivisao extends javax.swing.JFrame {
     
     private Divisao divisao; 
     private List<Divisao> divisoes;
+    private JanelaPrincipal janela;
     
     public JanelaAdicionarDivisao() {
         divisao = new Divisao();
         divisoes = new ArrayList<Divisao>();
+        janela = new JanelaPrincipal();
         initComponents();
     }
 
@@ -99,11 +102,12 @@ public class JanelaAdicionarDivisao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoAddDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAddDivisaoActionPerformed
-       divisao.setNome(textNomeDivisao.getText());
+       divisao.setNomeDivisao(textNomeDivisao.getText());
        divisoes.add(divisao);
        JOptionPane.showMessageDialog(null, "Divisão Cadastrada com sucesso!!");
        textNomeDivisao.setText("");
        textNomeDivisao.requestFocus();
+       janela.preencherCombo();
     }//GEN-LAST:event_botaoAddDivisaoActionPerformed
 
     private void BotaoSairDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSairDivisaoActionPerformed

@@ -11,7 +11,7 @@ public class Relatorio extends EmpresaVisitor
    
    public void visit(Divisao divisao){
        if(resultado.equals("")){
-          resultado = divisao.getNome()+ "\n";
+          resultado = divisao.getNomeChefe()+ "\n";
        }
    }
    

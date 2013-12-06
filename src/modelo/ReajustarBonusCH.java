@@ -27,7 +27,7 @@ public class ReajustarBonusCH extends EmpresaVisitor
    
    public void visit(Chefe c){
        double resultado = custo*c.getBonus();
-       c.setBonus(resultado);
+       c.setBonusChefe(resultado);
    }
    
    public double getResultado(){

@@ -8,8 +8,8 @@ package modelo;
 
 public class Maquinas extends Empresa
 {
-    private String nome;
-    private double custo;
+    private String nomeMaquina;
+    private double custoMaquina;
     
     public Maquinas(){
        
@@ -18,24 +18,24 @@ public class Maquinas extends Empresa
         visitor.visit(this);
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeChefe() {
+        return nomeMaquina;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeMaquina(String nomeMaquina) {
+        this.nomeMaquina = nomeMaquina;
     }
 
-    public double getCusto() {
-        return custo;
+    public double getCustoMaquina() {
+        return custoMaquina;
     }
 
-    public void setCusto(double custo) {
-        this.custo = custo;
+    public void setCustoMaquina(double custoMaquina) {
+        this.custoMaquina = custoMaquina;
     }
 
     @Override
     public String toString() {
-        return "Maquinas{" + "nome=" + nome + ", custo=" + custo + '}';
+        return "Maquinas{" + "nomeMaquina=" + nomeMaquina + ", custoMaquina=" + custoMaquina + '}';
     }       
 }

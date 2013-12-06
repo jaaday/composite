@@ -20,12 +20,19 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form JanelaPrincipal
      */
-    private Divisao divisao; 
+    private Divisao divisao;
+    private Maquinas maquina;
+    private RecursosHumanos rh;
+    private Chefe chefe;
     private List<Divisao> divisoes;
-    
+    private IteratorVisitor iterator;
     public JanelaPrincipal() { 
         divisoes = new ArrayList<Divisao>();
         divisao = new Divisao();
+        maquina = new Maquinas();
+        rh = new RecursosHumanos();
+        chefe = new Chefe();
+        iterator = new IteratorVisitor();
         initComponents();
     }
 
@@ -237,6 +244,11 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridLayout(12, 1, 0, 2));
 
         buttonCadastrar.setText("Cadastrar");
+        buttonCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCadastrarActionPerformed(evt);
+            }
+        });
         jPanel1.add(buttonCadastrar);
 
         buttonImportarXml.setText("Importar XML");
@@ -287,18 +299,22 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void comboBoxNomeDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxNomeDivisaoActionPerformed
+        
+    }//GEN-LAST:event_comboBoxNomeDivisaoActionPerformed
+
+    public void preencherCombo(){
         comboBoxNomeDivisao.setModel(new DefaultComboBoxModel(divisoes.toArray()));
         //comboBox de String com o nome do livro:
 
         for (Divisao d : divisoes){
-            comboBoxNomeDivisao.addItem(d.getNome());
+            comboBoxNomeDivisao.addItem(d.getNomeChefe());
         }
-    }//GEN-LAST:event_comboBoxNomeDivisaoActionPerformed
-
+    }
+    
+    
     private void botaAddDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaAddDivisaoActionPerformed
        new gui.JanelaAdicionarDivisao().setVisible(true);
     }//GEN-LAST:event_botaAddDivisaoActionPerformed
@@ -306,6 +322,29 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private void textCustoChefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textCustoChefeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textCustoChefeActionPerformed
+
+    private void buttonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarActionPerformed
+        //Add divisao
+        divisao.setNomeDivisao(String.valueOf(comboBoxNomeDivisao.getSelectedItem()));
+        iterator.visit(divisao);
+        
+        //Add RH
+        rh.setNomeRH(textNomeRecursosHumanos.getText());
+        rh.setCustoRH(Double.parseDouble(textPrecoRH.getText()));
+        iterator.visit(rh);
+        
+        //Add Maquina
+        maquina.setNomeMaquina(textNomeMaquina.getText());
+        maquina.setCustoMaquina(Double.parseDouble(textPrecoMaquina.getText()));
+        iterator.visit(maquina);
+        
+        //Add Chefe
+        chefe.setNomeChefe(textNomeChefe.getText());
+        chefe.setCustoChefe(Double.parseDouble(textCustoChefe.getText()));
+        chefe.setBonusChefe(Double.parseDouble(textBonusChefe.getText()));
+        iterator.visit(chefe);
+        
+    }//GEN-LAST:event_buttonCadastrarActionPerformed
 
     
     

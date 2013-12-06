@@ -20,7 +20,7 @@ public class ReajustarSalarioRH extends EmpresaVisitor
    
    public void visit(RecursosHumanos rh){
        double resultado = custo*rh.getPreco();
-       rh.setCusto(resultado);
+       rh.setCustoRH(resultado);
    }
    
    public void visit(Maquinas m){

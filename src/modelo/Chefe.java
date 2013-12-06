@@ -2,9 +2,9 @@ package modelo;
 
 public class Chefe extends Empresa
 {
-    private String nome;
-    private double custo;
-    private double bonus = 0;
+    private String nomeChefe;
+    private double custoChefe;
+    private double bonusChefe = 0;
     
     public Chefe(){
      
@@ -14,28 +14,28 @@ public class Chefe extends Empresa
         visitor.visit(this);
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeChefe() {
+        return nomeChefe;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeChefe(String nomeChefe) {
+        this.nomeChefe = nomeChefe;
     }
 
-    public double getCusto() {
-        return custo;
+    public double getCustoChefe() {
+        return custoChefe;
     }
 
-    public void setCusto(double custo) {
-        this.custo = custo;
+    public void setCustoChefe(double custoChefe) {
+        this.custoChefe = custoChefe;
     }
 
-    public void setBonus(double bonus) {
-        this.bonus = bonus;
+    public void setBonusChefe(double bonusChefe) {
+        this.bonusChefe = bonusChefe;
     }
 
     @Override
     public String toString() {
-        return "Chefe{" + "nome=" + nome + ", custo=" + custo + ", bonus=" + bonus + '}';
+        return "Chefe{" + "nomeChefe=" + nomeChefe + ", custoChefe=" + custoChefe + ", bonusChefe=" + bonusChefe + '}';
     }          
 }

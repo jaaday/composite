@@ -10,8 +10,8 @@ import java.util.*;
 
 public class RecursosHumanos extends Empresa
 {
-    private String nome;
-    private double custo;
+    private String nomeRH;
+    private double custoRH;
     ArrayList<Empresa> rhs = new ArrayList<Empresa>();
     
     public RecursosHumanos(){
@@ -29,25 +29,25 @@ public class RecursosHumanos extends Empresa
         }
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeChefe() {
+        return nomeRH;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeRH(String nomeRH) {
+        this.nomeRH = nomeRH;
     }
 
-    public double getCusto() {
-        return custo;
+    public double getCustoRH() {
+        return custoRH;
     }
 
-    public void setCusto(double custo) {
-        this.custo = custo;
+    public void setCustoRH(double custoRH) {
+        this.custoRH = custoRH;
     }
 
     @Override
     public String toString() {
-        return "RecursosHumanos{" + "nome=" + nome + ", custo=" + custo + '}';
+        return "RecursosHumanos{" + "nomeRH=" + nomeRH + ", custoRH=" + custoRH + '}';
     }  
 }
 

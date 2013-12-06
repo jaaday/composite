@@ -13,7 +13,7 @@ public abstract class Empresa
         throw new UnsupportedOperationException();
     }
     
-    public String getNome(){
+    public String getNomeChefe(){
         throw new UnsupportedOperationException();
     }
     
