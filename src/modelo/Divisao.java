@@ -23,6 +23,11 @@ public class Divisao extends Empresa {
         this.nomeDivisao = nomeDivisao;
     }
 
+    public String getNomeDivisao() {
+        return nomeDivisao;
+    }
+    
+
     public void add(Empresa divisao) {
         divisoes.add(divisao);
     }
@@ -34,6 +39,7 @@ public class Divisao extends Empresa {
         }
     }
 
+    
     public String toString() {
         return "Divisao{" + "nomeDivisao=" + nomeDivisao + '}';
     }
